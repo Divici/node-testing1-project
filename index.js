@@ -28,6 +28,10 @@ console.log(trimProperties({foo: '   bar   '}));
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  for (const property in obj){
+    obj[property] = obj[property].trim();
+  }
+  return obj
 }
 
 /**
@@ -40,6 +44,13 @@ function trimPropertiesMutation(obj) {
  */
 function findLargestInteger(integers) {
   // ✨ implement
+  let largest = 0
+
+  integers.forEach(obj=>{
+    if(obj.integer > largest) largest= obj.integer
+  })
+
+  return largest;
 }
 
 class Counter {
