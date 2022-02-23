@@ -8,7 +8,15 @@
  */
 function trimProperties(obj) {
   // ✨ implement
+  const newObj = {};
+
+  for (const property in obj){
+    newObj[property] = obj[property].trim();
+  }
+  return newObj
 }
+
+console.log(trimProperties({foo: '   bar   '}));
 
 /**
  * [Exercise 2] trimPropertiesMutation trims in place the properties of an object
